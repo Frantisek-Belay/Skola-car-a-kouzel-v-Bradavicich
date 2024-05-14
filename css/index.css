@@ -1,0 +1,119 @@
+/***********
+    main
+************/
+main {
+  height: 100vh; /* Zajistí velikost OBSAHU při KAŽDÉM rozměru výšky okna prohlížeče */
+  background: linear-gradient(rgb(6, 6, 6), rgba(0, 0, 0, 0.5)),
+    /* POZOR, gradient (PŘECHOD) potřebuje ALESPOŇ DVĚ BARVY !!*/
+      /* Pro BAREVNÝ PŘECHOD dvou barev !! */
+      /* PŘEKRYJE fotku pozadí zvolenou barvou pro lepší viditelnost OBSAHU stránky */
+      url(../img/background.webp); /* fotka NA POZADÍ stránky */
+  background-size: cover; /* zmenší VĚTŠÍ fotku, aby se co NEVÍC VLEZLA na stránku */
+  background-position: center; /* ZAROVNÁ fotku pozadí VŽDY NA STŘED stánky */
+  background-repeat: no-repeat; /* PRO MENŠÍ fotky pro pozadí ZAMEZÍ "TAPETOVÁNÍ" (NAMNOŽENÍ) při ZOOMOVÁNÍ stránky*/
+  background-attachment: fixed; /* ZAFIXUJE fotku pozadí na místě, posouvá se "JEN" obsah PŘED fotkou */
+
+  display: flex; /* umožní zarovnávat prvky na stránce; VÝCHOZÍ hodnota je row */
+  flex-direction: row; /* toto NEMUSÍM uvádět; HLAVNÍ OSA je VODOROVNÁ, v řádku, VEDLEJŠÍ OSA je SVISLÁ */
+  /* flex-direction: column; HLAVNÍ OSA je SVISLÁ, a .... */
+  justify-content: center; /* ZAROVNÁ prvky PO HLAVNÍ OSE NA STŘED */
+  align-items: center; /* ZAROVNÁ prvky po vedlejší ose NA STŘED */
+}
+
+.main-heading {
+  text-align: center; /* ZAROVNÁ CELOU classu main-heading NA STŘED */
+}
+
+.main-heading img {
+  width: 200px;
+  margin-bottom: 20px;
+  animation: fromTop 2s linear; /* přiřazení keyframu pro "objevení se (reveal) prvku na stráce */
+}
+
+.main-heading h1 {
+  color: white;
+  font-size: 50px;
+  letter-spacing: 2px; /* MEZERA MEZI PÍSMENKY (word-spacing = mezera mezi slovy */
+  animation: zoom 2s linear;
+}
+
+.main-heading h2 {
+  color: white;
+  font-size: 40px;
+  letter-spacing: 1px;
+  animation: fromBottom 2s linear;
+}
+
+/***************
+    keyframes
+****************/
+@keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fromTop {
+  0% {
+    opacity: 0; /* NEPRŮHLEDNOST */
+    transform: translateY(
+      -50px
+    ); /* svislý pohyb od shora dolů o 30px k původní pozici */
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(
+      0px
+    ); /* původní pozice (toto zde NEMUSÍ být uvedeno, vždy je automaticky původní) */
+  }
+}
+
+@keyframes fromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(
+      -50px
+    ); /* zleva doprava; 50px bude pohyb zprava doleva */
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(
+      0px
+    ); /* translateX způsobí pohyb ze strany na stranu */
+    /* */
+  }
+}
+
+@keyframes zoom {
+  0% {
+    opacity: 0;
+    transform: scaleX(
+      0%
+    ); /* toto jsem vytvořil sám - text je stlačený a NEVIDITELNÝ */
+  }
+
+  100% {
+    opacity: 1;
+    transform: scaleX(
+      100%
+    ); /* toto jsem vytvořil sám - text se ROZTÁHNE ZE STŘEDU na 100% a VIDITELNÝ */
+  }
+}

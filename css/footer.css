@@ -1,0 +1,13 @@
+footer {
+  background-color: black;
+  color: white;
+  text-align: center; /* Druhý způsob, jak patičku ZAROVNAT NA STŘED V OBOU OSÁCH: */
+  height: 70px;
+
+  /* První způsob ZAROVNÁNÍ PATIČKY V OBOU OSÁCH NA STŘED: */
+  display: flex; /* Toto mi umožní zarovnávat patičku přesně, jak potřebuju */
+  flex-direction: row; /* Nastaví HLAVNÍ OSU do řádku, tj. VODOROVNĚ 
+  (pokud bych psal "column", OSY by se prohodily. */
+  justify-content: center; /* ZAROVNÁ PO HLAVNÍ (vodorovné = row) OSE - na střed */
+  align-items: center; /* ZAROVNÁ PO VEDLEJŠÍ (svislé) OSE - na střed */
+}

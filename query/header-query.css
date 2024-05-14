@@ -1,0 +1,35 @@
+/* soubor query MUSÍM LINKOVAT v headeru VŽDY POD linky se STYLY,
+PROTOŽE @media query styly css "PŘEBÍJEJÍ" OD URČITÝCH ŠÍŘEK použitého displaye zařízení,
+ve kterém se tyto web stránky budou zobrazovat */
+@media (max-width: 800px) {
+  /* POD 800px a méně */
+  header nav {
+    display: none; /* od 800px SKRYJE navigační MENU */
+    position: absolute; /* "vyrve" navigační MENU ze stylování */
+
+    top: 70px;
+    background-color: #060606;
+    width: 100%;
+  }
+
+  header nav li {
+    display: block; /* opět zarovná MENU POD SEBE*/
+    text-align: center !important; /* MENU zarovná NA STŘED */
+    margin-top: 10px;
+    margin-bottom: 10px;
+  } /* !important - PŘEBIJE VŠECHNA NASTAVENÍ A ZAJISTÍ POUŽITÍ TOHOTO STYLU */
+
+  .menu-icon {
+    display: block; /* ODKRYJE IKONKU MENU "hamburger" */
+    color: white; /* ZMĚNÍ BARVU ikonky na bílou */
+    font-size: 23px; /* ZVĚTŠÍ ikonku "hamburgeru" na 23px */
+    margin-right: 20px;
+    cursor: pointer; /* kurzor "ruka" */
+  }
+}
+
+@media (min-width: 800px) {
+  header nav {
+    display: block !important; /* od 800px a VÍCE, ZOBRAZÍ navigační MENU */
+  } /* !important - PŘEBIJE VŠECHNA NASTAVENÍ A ZAJISTÍ POUŽITÍ TOHOTO STYLU */
+}

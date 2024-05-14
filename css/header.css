@@ -1,0 +1,42 @@
+/************
+    Header
+*************/
+/* Stylování začínám VŽDY Z VNĚJŠKU kódu: */
+
+header {
+  display: flex; /* všechny prvky se stanou FLEXIBILNÍ */
+  flex-direction: row; /* hlavní osa je v řádku, vedlejší je svislá */
+  align-items: center; /* zarovná na VEDLEJŠÍ SVISLOU osu*/
+  background-color: rgba(6, 6, 6);
+  height: 70px;
+}
+
+.logo {
+  flex-grow: 1; /* logo obsadí MAXIMUM prostoru na ŠÍŘKU a ODSUNE MENU DOPRAVA*/
+}
+
+.logo img {
+  /* upraví velikost loga a jeho pouici */
+  width: 50px;
+  margin-left: 20px;
+}
+
+/* Navigace */
+nav {
+  margin-right: 30px; /* Odsadí MENU ZPRAVA o 30px */
+}
+
+nav li {
+  display: inline-block; /* zarovná menu VEDLE SEBE */
+  list-style-type: none; /* skryje ODRÁŽKY u MENU (inline-block odrážky SKRYJE TAKÉ)*/
+  margin-right: 10px;
+}
+
+nav li a {
+  text-decoration: none;
+  color: white;
+}
+
+.menu-icon {
+  display: none; /* SKRYJE IKONKU MENU "hamburger" */
+}
