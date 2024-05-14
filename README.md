@@ -1,4 +1,4 @@
-Tento projekt představuje webovou aplikaci pro správu žáků v imaginární škole čar a kouzel - Bradavicích. 
+Tento projekt představuje webovou aplikaci pro správu žáků v imaginární škole čar a kouzel - Bradavicích.
 Aplikace je vyvinuta pomocí technologií HTML, CSS, PHP, MySQL a JavaScript.
 
 Po načtení hlavní stránky aplikace vidíme animovaný nadpis "Škola čar a kouzel - Bradavice" spolu s animovaným logem Bradavic. 
